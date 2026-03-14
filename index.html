@@ -29,7 +29,7 @@
     }
   </script>
   <style>
-    html { scroll-behavior: smooth; }
+    html, body { scroll-behavior: smooth; overflow-x: hidden; }
 
     /* ---- navbar ---- */
     #navbar {
@@ -171,9 +171,41 @@
     <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-brand-red opacity-10 blur-3xl pointer-events-none"></div>
     <div class="absolute bottom-0 -left-40 w-80 h-80 rounded-full bg-brand-red opacity-5 blur-3xl pointer-events-none"></div>
 
-    <!-- L-plate accent -->
-    <div class="absolute right-8 top-1/2 -translate-y-1/2 hidden lg:flex items-center justify-center w-56 h-56 rounded-2xl border-8 border-brand-red opacity-10">
-      <span class="text-white font-black text-9xl">L</span>
+    <!-- Car illustration -->
+    <div class="absolute right-0 bottom-0 hidden lg:block w-[560px] pointer-events-none select-none" style="opacity:0.18;">
+      <svg viewBox="0 0 560 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Body -->
+        <rect x="40" y="120" width="480" height="80" rx="18" fill="white"/>
+        <!-- Roof / cabin -->
+        <path d="M150 120 C165 70, 210 50, 270 48 C330 48, 370 65, 400 120 Z" fill="white"/>
+        <!-- Windscreen tint -->
+        <path d="M168 118 C178 82, 215 62, 268 60 C310 60, 345 76, 370 118 Z" fill="#E8000D" opacity="0.4"/>
+        <!-- Front bumper -->
+        <rect x="490" y="148" width="28" height="32" rx="8" fill="white"/>
+        <!-- Rear bumper -->
+        <rect x="42" y="148" width="28" height="32" rx="8" fill="white"/>
+        <!-- Front wheel arch -->
+        <ellipse cx="420" cy="200" rx="52" ry="52" fill="#1a1a1a"/>
+        <ellipse cx="420" cy="200" rx="36" ry="36" fill="#444"/>
+        <ellipse cx="420" cy="200" rx="18" ry="18" fill="white"/>
+        <!-- Rear wheel arch -->
+        <ellipse cx="155" cy="200" rx="52" ry="52" fill="#1a1a1a"/>
+        <ellipse cx="155" cy="200" rx="36" ry="36" fill="#444"/>
+        <ellipse cx="155" cy="200" rx="18" ry="18" fill="white"/>
+        <!-- Headlight -->
+        <rect x="498" y="138" width="20" height="12" rx="4" fill="#E8000D" opacity="0.9"/>
+        <!-- Tail light -->
+        <rect x="42" y="138" width="20" height="12" rx="4" fill="#E8000D" opacity="0.9"/>
+        <!-- Door line -->
+        <line x1="270" y1="122" x2="270" y2="196" stroke="#ccc" stroke-width="2" opacity="0.4"/>
+        <!-- Door handle front -->
+        <rect x="305" y="152" width="28" height="7" rx="3" fill="#ccc" opacity="0.5"/>
+        <!-- Door handle rear -->
+        <rect x="195" y="152" width="28" height="7" rx="3" fill="#ccc" opacity="0.5"/>
+        <!-- L plate on roof -->
+        <rect x="245" y="52" width="32" height="32" rx="4" fill="white" opacity="0.9"/>
+        <text x="261" y="74" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="22" font-weight="900" fill="#E8000D">L</text>
+      </svg>
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 w-full">
@@ -245,7 +277,7 @@
           <div class="text-red-200 font-medium mt-1 text-sm uppercase tracking-wide">Students Passed</div>
         </div>
         <div>
-          <div class="stat-number text-4xl font-black">92%</div>
+          <div class="stat-number text-4xl font-black">75%</div>
           <div class="text-red-200 font-medium mt-1 text-sm uppercase tracking-wide">First-Time Pass Rate</div>
         </div>
         <div>
